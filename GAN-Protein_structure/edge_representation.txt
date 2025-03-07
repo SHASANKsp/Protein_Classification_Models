@@ -1,0 +1,33 @@
+Me: explain the edge representation part
+
+PDF: The text mentions that Graphein provides utilities for a number of edge-construction schemes, which are organized into distance-based, intramolecular interaction-based, and atomic structure-based submodules. These edge construction methods are composable to allow for the creation of novel edge construction schemes. The text also mentions that Graphein provides functionality for user-defined node or edge features, with useful utilities allowing for computation or aggregation of features over constituent chains. Overall, Graphein provides a flexible and customizable framework for constructing and analyzing edge representations of protein structures and biological interaction networks.
+
+Me: can you explain the edge-construction schemes
+
+PDF: The text mentions that Graphein provides utilities for a number of edge-construction schemes, which are organized into distance-based, intramolecular interaction-based, and atomic structure-based submodules. 
+
+Distance-based edge construction methods include distance cutoffs, which create edges between nodes that are within a certain distance of each other, and k-nearest neighbors, which create edges between a node and its k nearest neighbors based on Euclidean distance.
+
+Intramolecular interaction-based edge construction methods include hydrogen bonds, which create edges between nodes that are involved in hydrogen bonding, and covalent bonds, which create edges between nodes that are covalently bonded.
+
+Atomic structure-based edge construction methods include van der Waals interactions, which create edges between nodes that are in close proximity to each other based on van der Waals radii, and electrostatic interactions, which create edges between nodes that have opposite charges.
+
+Overall, these edge construction methods provide a range of options for constructing edges between nodes in protein structures and biological interaction networks.
+
+Me: can you explain Intramolecular interaction-based edge construction methods
+
+PDF: Intramolecular interaction-based edge construction methods are a type of edge construction scheme provided by Graphein for constructing edges between nodes in protein structures and biological interaction networks. These methods create edges based on interactions that occur within a single molecule or protein structure. 
+
+One example of an intramolecular interaction-based edge construction method is hydrogen bonds. Hydrogen bonds are weak interactions between a hydrogen atom and an electronegative atom, such as oxygen or nitrogen. In the context of protein structures, hydrogen bonds can occur between amino acid residues that contain hydrogen and electronegative atoms in other residues. Graphein provides functionality for computing hydrogen bonds between nodes in a protein structure, and these hydrogen bonds can be used to construct edges in a graph representation of the structure.
+
+Another example of an intramolecular interaction-based edge construction method is covalent bonds. Covalent bonds are strong chemical bonds that involve the sharing of electrons between atoms. In the context of protein structures, covalent bonds can occur between amino acid residues that are adjacent to each other in the protein chain. Graphein provides functionality for computing covalent bonds between nodes in a protein structure, and these covalent bonds can be used to construct edges in a graph representation of the structure.
+
+Overall, intramolecular interaction-based edge construction methods provide a way to capture important interactions that occur within a single molecule or protein structure, and can be used to construct edges in a graph representation of the structure.
+
+Me: how intramolecular interaction-based edge construction methods find out bonds?
+
+PDF: Intramolecular interaction-based edge construction methods, such as covalent bonds and hydrogen bonds, are typically identified based on geometric criteria. For example, covalent bonds are identified based on the distance between atoms in a protein structure, with atoms that are within a certain distance of each other being considered to be bonded. Similarly, hydrogen bonds are identified based on the distance between a hydrogen atom and an electronegative atom, with atoms that are within a certain distance of each other being considered to be involved in a hydrogen bond.
+
+Graphein provides functionality for computing covalent bonds and hydrogen bonds between nodes in a protein structure using distance-based heuristics. These heuristics involve setting a threshold distance for each type of bond, and identifying pairs of atoms that are within the threshold distance of each other as being bonded. For example, the threshold distance for a covalent bond might be set to the sum of the van der Waals radii of the two atoms, while the threshold distance for a hydrogen bond might be set to a fixed value based on the expected distance between a hydrogen atom and an electronegative atom.
+
+Overall, intramolecular interaction-based edge construction methods use geometric criteria to identify bonds between atoms in a protein structure, and Graphein provides functionality for computing these bonds using distance-based heuristics [T2, T3].
