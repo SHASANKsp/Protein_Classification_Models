@@ -1,4 +1,4 @@
-# Protein Structure Classification Using Graph Neural Networks (GNNs)
+# Protein Structure Classification Using Graph Neural Networks (GNNs) - Work in progress
 
 ## Overview
 
@@ -7,7 +7,6 @@ This project implements a pipeline for classifying protein structures using Grap
 ## Architecture
 
 ### 1. Data Acquisition
-
 1. **Uniprot to PDB Mapping**:
    - Input dataset contains Uniprot IDs with corresponding classification labels
    - Maps Uniprot IDs to Protein Data Bank (PDB) identifiers using Uniprot API
@@ -41,32 +40,10 @@ This project implements a pipeline for classifying protein structures using Grap
    - Implements standard training loops with evaluation metrics
    - Supports common regularization techniques
 
-## Usage Instructions
+## Structural representation - Graphein
+Graphein provides utilities for a number of edge-construction schemes, which are organized into distance-based, intramolecular interaction-based, and atomic structure-based submodules. 
+These edge construction methods are composable to allow for the creation of novel edge construction schemes. 
 
-1. Prepare input file with Uniprot IDs and corresponding labels
-2. Run data acquisition pipeline to fetch and process PDB structures
-3. Convert protein structures to graph representations
-4. Configure and train GNN model with appropriate parameters
-5. Evaluate model performance on test set
-
-## Dependencies
-
-- Python 3.7+
-- Biopython (for PDB processing)
-- Graphein (for graph construction)
-- PyTorch Geometric or DGL (for GNN implementation)
-- Standard scientific stack (NumPy, Pandas)
-
-## Expected Outputs
-
-- Processed graph representations of protein structures
-- Trained GNN models with evaluation metrics
-- Visualization of important structural features (when using GAT)
-
-## Applications
-
-This pipeline can be adapted for various bioinformatics tasks including:
-- Protein function prediction
-- Enzyme classification
-- Protein-protein interaction prediction
-- Structural motif detection
+`Distance-based edge construction methods` include distance cutoffs, which create edges between nodes that are within a certain distance of each other, and k-nearest neighbors, which create edges between a node and its k nearest neighbors based on Euclidean distance.  
+`Intramolecular interaction-based edge construction methods` include hydrogen bonds, which create edges between nodes that are involved in hydrogen bonding, and covalent bonds, which create edges between nodes that are covalently bonded.  
+`Atomic structure-based edge construction methods` include van der Waals interactions, which create edges between nodes that are in close proximity to each other based on van der Waals radii, and electrostatic interactions, which create edges between nodes that have opposite charges.
